@@ -1,0 +1,32 @@
+# Serveur Wordpress
+site:
+  build: site
+  ports :
+   - "100:80"
+  volumes:
+   - ./code:/var/www/html/
+  links:
+   - monmysql
+
+# Serveur PHPMyAdmin
+monphpmyadmin:
+  image: nazarpc/phpmyadmin
+  ports:
+    - "8080:80"
+  links:
+    - monmysql:mysql
+
+# Serveur MySQL
+monmysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+  volumes_from:
+    - mondb
+
+# Stockage
+mondb:
+  image: busybox
+  volumes:
+    - ./mysql:/var/lib/mysql
+
