@@ -1,4 +1,4 @@
-# Serveur Wordpress
+# Serveur Web
 site:
   build: site
   ports :
