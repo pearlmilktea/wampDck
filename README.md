@@ -1,4 +1,7 @@
-Basé en partie sur http://javaetmoi.com/2015/07/plateforme-lamp-docker-compose/
+# wamp Docker
+
+Based on http://javaetmoi.com/2015/07/plateforme-lamp-docker-compose/
 
 # Commande
-docker-compose up -d
+Run the following commands:
+> docker-compose up -d
